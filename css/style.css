@@ -34,6 +34,15 @@ box-shadow: 0px 2px 9px #888;
 max-height: 420px;
 }
 
+.sponsor {
+	max-width: 300px;
+	width: 100%;
+}
+
+.bottom-pad {
+	padding-bottom: 40px;
+}
+
 .meter { 
 	height: 45px;  /* Can be anything */
 	position: relative;
