@@ -37,6 +37,7 @@ max-height: 420px;
 .sponsor {
 	max-width: 300px;
 	width: 100%;
+	border: none;
 }
 
 .bottom-pad {
