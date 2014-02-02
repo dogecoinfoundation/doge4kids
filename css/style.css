@@ -21,6 +21,11 @@ a:visited {
 	color: #8e44ad;
 }
 
+.addthis_floating_style {
+	background: none;
+	
+}
+
 .header {
 background-image: url('../img/puppies.jpg');
 background-size: cover;
