@@ -15,29 +15,6 @@
 	    <link href="img/avatar.png" rel="apple-touch-icon-precomposed">
 	    <meta content="on" http-equiv="cleartype">
 	    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
-		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
-		<script>
-		$(function() {		
-		target = '20000000';
-    	address = "DTMxdZkWd7aCX1a7DcJmUJs931b1GSBQsk";	
-		$.getJSON("http://query.yahooapis.com/v1/public/yql?q=select%20p%20from%20html%20where%20url%20%3D%20'http%3A%2F%2Fdogechain.info%2Fchain%2FDogecoin%2Fq%2Faddressbalance%2F" + address + "'&format=json", function(data) {
-			$(".suchcurrency > span").text(Math.floor(data.query.results.body.p).toLocaleString());
-			$(".suchcurrency").fadeIn();
-			percentage = (Math.floor(data.query.results.body.p) / target)*100;
-			$(".manydoge").width(percentage + "%");
-
-				$(".meter > span").each(function() {
-				$(this)
-					.data("origWidth", $(this).width())
-					.width(0)
-					.animate({
-						width: $(this).data("origWidth")
-					}, 1200);
-				});
-
-		});
-		});
-		</script>
 	</head>
 
 	<body>
@@ -68,7 +45,7 @@
 				<div class="content">
 <p>Send your DOGE donations directly to the official foundation managed address: 
 
-<h2>DTMxdZkWd7aCX1a7DcJmUJs931b1GSBQsk</h2> <p>...or <a href="#" target="_blank">visit the Crowdtilt page</a> where you can also donate USD.</p>
+<h2>DTMxdZkWd7aCX1a7DcJmUJs931b1GSBQsk</h2> <p>...or <a href="https://reddit.crowdtilt.com/campaigns/doge-4-kids-service-dogs-for-children-in-need" target="_blank">visit the Crowdtilt page</a> where you can also donate USD.</p>
 
 <p><strong>The US$30,000 raised will help sponsor:</strong></p>
 
@@ -92,7 +69,7 @@
 			  <div class="centered">
 				<img src="img/4paws.png"/>
 			</div>
-			<p>Since its inception in 1998, 4 Paws has placed over 650 dogs across the United States and in  countries including Canada, New Zealand, Australia, Germany, Japan and Switzerland.</p>
+			<p>Since its inception in 1998, 4 Paws has placed over 650 dogs across the United States and in  countries including Canada, New Zealand, Australia, Germany, Japan and Switzerland. <a class="popup-vimeo" href="https://vimeo.com/50959272">Watch the video.</a></p>
 							
 
 
@@ -109,18 +86,53 @@
 				<a href="https://www.crowdtilt.com/" target="_blank"><img src="img/crowdtilt.png" class="sponsor"/></a>
 		</div></div></div>
 
-<!-- AddThis Button BEGIN -->
-<div class="addthis_toolbox addthis_floating_style addthis_32x32_style" style="top:50px;">
-<a class="addthis_button_facebook"></a>
-<a class="addthis_button_twitter"></a>
-<a class="addthis_button_reddit"></a>
-<a class="addthis_button_tumblr"></a>
-<a class="addthis_button_google_plusone_share"></a>
-<a class="addthis_button_compact"></a>
-</div>
-<script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
-<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-52edbf81295bb90e"></script>
-<!-- AddThis Button END -->
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
+		<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/0.8.9/jquery.magnific-popup.min.js"></script>
+		<script>
+		$(function() {		
+		target = '20000000';
+    	address = "DTMxdZkWd7aCX1a7DcJmUJs931b1GSBQsk";	
+		$.getJSON("http://query.yahooapis.com/v1/public/yql?q=select%20p%20from%20html%20where%20url%20%3D%20'http%3A%2F%2Fdogechain.info%2Fchain%2FDogecoin%2Fq%2Faddressbalance%2F" + address + "'&format=json", function(data) {
+			$(".suchcurrency > span").text(Math.floor(data.query.results.body.p).toLocaleString());
+			$(".suchcurrency").fadeIn();
+			percentage = (Math.floor(data.query.results.body.p) / target)*100;
+			$(".manydoge").width(percentage + "%");
+
+				$(".meter > span").each(function() {
+				$(this)
+					.data("origWidth", $(this).width())
+					.width(0)
+					.animate({
+						width: $(this).data("origWidth")
+					}, 1200);
+				});
+
+		});
+
+		$('.popup-vimeo,').magnificPopup({
+				disableOn: 700,
+				type: 'iframe',
+				mainClass: 'mfp-fade',
+				removalDelay: 160,
+				preloader: false,
+				fixedContentPos: false
+			});
+
+		});
+		</script>
+
+		<!-- AddThis Smart Layers BEGIN -->
+		<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-52edbf81295bb90e"></script>
+		<script type="text/javascript">
+		  addthis.layers({
+		    'theme' : 'transparent',
+		    'share' : {
+		      'position' : 'left',
+		      'numPreferredServices' : 5
+		    }   
+		  });
+		</script>
+		<!-- AddThis Smart Layers END -->
 
 	</body>
 
