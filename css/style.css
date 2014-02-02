@@ -53,7 +53,7 @@ max-height: 420px;
 	height: 45px;  /* Can be anything */
 	position: relative;
 	margin: 20px 0 20px 0; /* Just for demo spacing */
-	background: #555;
+	background: #111;
 	-moz-border-radius: 25px;
 	-webkit-border-radius: 25px;
 	border-radius: 25px;
