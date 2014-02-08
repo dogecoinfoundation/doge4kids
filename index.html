@@ -35,7 +35,7 @@
 					</div>	
 
 					<p style="display:none" class="suchcurrency"><span></span> of 20,000,000 DOGE target donated so far!</p>
-					<p><em>Please note that the donation summary is now no longer accurate as we are beginning the process of transferring the funds.</em></p> 
+					
 				</div>
 			</div>
 		</div>
@@ -95,19 +95,13 @@
 		$(function() {		
 		target = '20000000';
     	address = "DTMxdZkWd7aCX1a7DcJmUJs931b1GSBQsk";	
-		$.getJSON("http://query.yahooapis.com/v1/public/yql?q=select%20p%20from%20html%20where%20url%20%3D%20'http%3A%2F%2Fdogechain.info%2Fchain%2FDogecoin%2Fq%2Faddressbalance%2F" + address + "'&format=json", function(data) {
-			$(".suchcurrency > span").text(Math.floor(data.query.results.body.p).toLocaleString());
-			$(".suchcurrency").fadeIn();
-			data.query.results.body.p = 21000000;
-			percentage = (Math.floor(data.query.results.body.p) / target)*100;
-			// If it's gone over target, set the progress bar to 100% rather than going over, oh and replace the target text
-			if (Math.floor(data.query.results.body.p) > target) {
+
 				percentage = 100;
 				$('.meter').removeClass('nostripes');
 				$('.suchcurrency').text('WE DID IT - 20,000,000 DOGE RAISED! STAY TUNED FOR MORE DETAILS!');
 				$('.address').text('Goal reached. Thank you for your support :)');
 				$($.doge);
-			}
+			
 
 			$(".manydoge").width(percentage + "%");
 
@@ -120,7 +114,7 @@
 					}, 1200);
 				});
 
-		});
+	
 
 		$('.popup-vimeo').magnificPopup({
 				disableOn: 700,
