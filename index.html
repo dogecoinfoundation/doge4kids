@@ -98,6 +98,7 @@
 		$.getJSON("http://query.yahooapis.com/v1/public/yql?q=select%20p%20from%20html%20where%20url%20%3D%20'http%3A%2F%2Fdogechain.info%2Fchain%2FDogecoin%2Fq%2Faddressbalance%2F" + address + "'&format=json", function(data) {
 			$(".suchcurrency > span").text(Math.floor(data.query.results.body.p).toLocaleString());
 			$(".suchcurrency").fadeIn();
+			data.query.results.body.p = 21000000;
 			percentage = (Math.floor(data.query.results.body.p) / target)*100;
 			// If it's gone over target, set the progress bar to 100% rather than going over, oh and replace the target text
 			if (Math.floor(data.query.results.body.p) > target) {
